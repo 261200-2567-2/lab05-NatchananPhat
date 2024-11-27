@@ -10,7 +10,8 @@ public class ring implements accessories {
             case "earth" -> "you have the earth element";
             case "water" -> "you have the water element";
             case "air" -> "you have the air element";
-            default -> "you have the fire element";
+            case "fire" -> "you have the fire element";
+            default -> "you don't have the element";
         };
     }
 }

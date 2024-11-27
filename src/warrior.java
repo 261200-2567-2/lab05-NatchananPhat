@@ -13,4 +13,14 @@ public class warrior implements character {
             return defense;
         }
     }
+
+    @Override
+    public int attack() {
+        return damage;
+    }
+
+    @Override
+    public  int defense(){
+        return defense;
+    }
 }

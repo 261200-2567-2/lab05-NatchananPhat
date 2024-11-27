@@ -5,20 +5,19 @@ public class Lab05 {
         Scanner career = new Scanner(System.in);
         System.out.print("Choose your career(warrior/mage): ");
         String myCareer = career.nextLine();
+        Scanner weapon = new Scanner(System.in);
         if (myCareer.equals("warrior")) {
-            Scanner weapon = new Scanner(System.in);
             System.out.print("Choose your weapon(sword/arrow): ");
             String myWeapon = weapon.nextLine();
             weapon weapon1 = new weapon();
             weapon1.equip(myWeapon);
             System.out.println("career: " + weapon1.useWarrior(myWeapon));
-            System.out.println("base attack: " + character.damage);
-            System.out.println("base defense: " + character.defense);
             warrior warrior1 = new warrior();
+            System.out.println("base attack: " + warrior1.attack());
+            System.out.println("base defense: " + warrior1.defense());
             System.out.println("attack with " + myWeapon + ": " + warrior1.attackWithWeapon(myWeapon));
             System.out.println("defense with " + myWeapon + ": " +warrior1.blockWithWeapon(myWeapon));
         } else {
-            Scanner weapon = new Scanner(System.in);
             System.out.print("Choose your weapon(staff/book): ");
             String myWeapon = weapon.nextLine();
             weapon weapon2 = new weapon();
@@ -30,12 +29,12 @@ public class Lab05 {
             ring1.equip(myRing);
             System.out.println("career: " + weapon2.useMage(myWeapon));
             System.out.println("element: " + ring1.useElement(myRing));
-            System.out.println("base attack: " + character.damage);
-            System.out.println("base defense: " + character.defense);
             mage mage1 = new mage();
+            System.out.println("base attack: " + mage1.attack());
+            System.out.println("base defense: " + mage1.defense());
             System.out.println("attack with " + myWeapon + ": " + mage1.attackWithCastSpell(myWeapon));
             System.out.println("defense with " + myWeapon + ": " + mage1.blockWithArcaneShield(myWeapon));
-            System.out.println("attack with " + myRing + "element: " + mage1.attackWithCastSpell(myRing));
+            System.out.println("attack with " + myRing + " element: " + mage1.attackWithElement(myRing));
         }
     }
 }
